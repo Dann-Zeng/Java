@@ -1,0 +1,18 @@
+/*
+* 案例2:小名要去漂亮国旅游,开始那里温度为华氏单位来计算
+* 我们需要帮他转换温度
+* c:=(F-32)/1.8
+* */
+
+
+
+public class FloatDoublePractice1 {
+    public static void main(String[] args) {
+//        定义变量
+        double a = 80.0;
+
+//
+        double c = (a - 32) / 1.8;
+        System.out.println("华氏度转换后为"+ c);
+    }
+}
