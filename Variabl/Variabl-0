@@ -1,0 +1,50 @@
+/*
+1.变量的理解:内存中的一个存储区域,该区域的数据可以在同一类范围不断变化
+2.变量的构成包含三要素:数据类型,变量名,存储的值
+3.java中变量的声明的格式:数据类型 变量名 = 变量值
+4.Java中的变量按照数据类型分类:
+
+基本数据(8):
+    整型:   byte  short   int(默认) long
+    浮点型:    float   double(默认)
+    字符型:    char
+    布尔型:    boolean
+
+引用数据;
+    类(class) 数组(array)  接口(interface)   举(enum) 注解(record)
+
+
+5.定义变量的方式是,变量名要遵循标识命名的规则和规范
+6.变量都有其作用域,和python里的函数差不多,出了作用域就无法在调用里面的变量
+定义好过后,就可以通过变量名的方式来使用该值
+变量值是数据,数据是最重要的,要满足类变量的数据型,在数据类型有效范围内
+ */
+
+
+
+public class Variabl {
+    public static void main(String[] args) {
+        //定义变量方式1
+        char gender;
+        gender = '男'; //过程1,变量的声明
+
+        gender = '女'; //过程2,变量的赋值(或初始化)
+
+// 如果一个变量前面有类似char的型,就证明在定义,如果只有变量 的话就代表是在用已有的变量,
+//        只是重新赋予值而已
+
+        //定义变量的方式2:声明与初始合并
+        int age = 10;
+
+        System.out.println(age);
+        System.out.println("age = "+age);
+        System.out.println("Hello World!"); //基本输出
+
+
+//        超出范围的值
+        byte x1 = 127;
+//        x1 =128及不通过
+        System.out.println(x1);
+
+    }
+}
