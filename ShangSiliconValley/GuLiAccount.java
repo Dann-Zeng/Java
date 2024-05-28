@@ -1,8 +1,3 @@
-package ShangSiliconValley;
-
-/**
- * GuLiAccount
- */
 public class GuLiAccount {
 
   public static void main(String[] args) {
@@ -24,37 +19,43 @@ public class GuLiAccount {
 
       switch (selection) {
         case '1':
-          System.out.println("----------当前收支明细记录----------");
-          System.out.println("收支\t账户金额\t   收支金额\t说    明");
+          System.out.println("-------------当前收支明细记录-------------");
+          System.out.println("收支\t账户金额\t\t收支金额\t\t说    明");
           System.out.print(info);
-          System.out.println("----------------------------------");
+          System.out.println("--------------------------------------2123---");
           break;
         case '2':
-          System.out.print("请输入收入金额：");
-          double income = Utility.readNumber();
-          if (income > 0) {
-            balance += income;
-          } else {
-            System.out.println("输入收入有误，请重新输入");
-            continue;
+          while (true) {
+            System.out.print("请输入收入金额：");
+            double income = Utility.readNumber();
+            if (income > 0) {
+              balance += income;
+              System.out.print("请输入收入说明：");
+              String incomeInfo = Utility.readString();
+              info = info + "收入\t" + balance + "\t\t" + income + "\t\t" + incomeInfo + "\n";
+              break;
+            } else {
+              System.out.println("输入收入有误，请重新输入");
+              continue;
+            }
           }
-          System.out.println("请输入收入说明：");
-          String incomeInfo = Utility.readString();
-          info = info + "收入\t" + balance + "\t   " + income + "\t  " + incomeInfo + "\n";
           break;
+
         case '3':
-          System.out.println("----------登记支出----------");
-          System.out.println("请输入支出金额：");
-          double outcome = Utility.readNumber();
-          if (outcome > 0 && outcome <= balance) {
-            balance -= outcome;
-          } else {
-            System.out.println("输入支出有误，请重新输入");
-            continue;
+          while (true) {
+            System.out.print("请输入支出金额：");
+            double outcome = Utility.readNumber();
+            if (outcome > 0 && outcome <= balance) {
+              balance -= outcome;
+              System.out.print("请输入支出说明：");
+              String outcomeInfo = Utility.readString();
+              info = info + "收入\t" + balance + "\t\t" + outcome + "\t\t" + outcomeInfo + "\n";
+              break;
+            } else {
+              System.out.println("输入支出有误，请重新输入");
+              continue;
+            }
           }
-          System.out.println("请输入支出说明：");
-          String outcomeInfo = Utility.readString();
-          info = info + "支出\t" + balance + "\t   " + outcome + "\t  " + outcomeInfo + "\n";
           break;
         case '4':
           System.out.println("----------确认是否退出(Y/N)----------");
