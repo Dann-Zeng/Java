@@ -28,7 +28,7 @@ public class CustomerList {
 //        参数：customer指定替换的新客户对象
 //        index指定所替换对象在数组中的位置，从0开始
 //        返回：替换成功返回true；false表示索引无效，无法替换
-        if (index <= 0 && index < total) {
+        if (index >= 0 && index < total) {
             customers[index] = cust;
             return true;
         }
